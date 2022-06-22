@@ -1,0 +1,15 @@
+C:\Users\Marti\source\repos\Bowling2\Bowling2\bin\Debug\net6.0\Bowling2.exe
+C:\Users\Marti\source\repos\Bowling2\Bowling2\bin\Debug\net6.0\Bowling2.deps.json
+C:\Users\Marti\source\repos\Bowling2\Bowling2\bin\Debug\net6.0\Bowling2.runtimeconfig.json
+C:\Users\Marti\source\repos\Bowling2\Bowling2\bin\Debug\net6.0\Bowling2.dll
+C:\Users\Marti\source\repos\Bowling2\Bowling2\bin\Debug\net6.0\Bowling2.pdb
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.csproj.AssemblyReference.cache
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.AssemblyInfoInputs.cache
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.AssemblyInfo.cs
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.csproj.CoreCompileInputs.cache
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.dll
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\refint\Bowling2.dll
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.pdb
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\Bowling2.genruntimeconfig.cache
+C:\Users\Marti\source\repos\Bowling2\Bowling2\obj\Debug\net6.0\ref\Bowling2.dll
