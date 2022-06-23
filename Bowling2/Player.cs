@@ -10,7 +10,8 @@ namespace Bowling2
     public class Player
     {
         public string? name;
-        public List<string> scores=new List<string>();
+        //public List<string> scores=new List<string>();
+        public List<Tuple<string, int, int>> scores = new List<Tuple<string, int, int>>();
 
     }
 }
