@@ -63,32 +63,65 @@ void BonusRoll(Player player)
         Console.WriteLine($"{player.name}:");
         Console.WriteLine("Please enter your score for Turn 1");
         int score1 = Convert.ToInt32(Console.ReadLine());
+        while(score1 > 10)
+        {
+            Console.WriteLine("Your score is invalid. Please enter again:");
+            Console.WriteLine("Please enter your score for Turn 1");
+            score1 = Convert.ToInt32(Console.ReadLine());
+        }
         Console.WriteLine("Please enter your score for Turn 2");
         int score2 = Convert.ToInt32(Console.ReadLine());
+        if (score1 < 10)
+        {
+            while (score2 > 10 || score2 > 10 - score1)
+            {
+                Console.WriteLine("Your score is invalid. Please enter again:");
+                Console.WriteLine("Please enter your score for Turn 2");
+                score2 = Convert.ToInt32(Console.ReadLine());
+            }
+        }
         Console.WriteLine("Please enter your score for Turn 3");
         int score3 = Convert.ToInt32(Console.ReadLine());
+        if ((score1==10 && score2 < 10) || (score1+score2==10))
+        {
+            while (score3 > 10 )
+            {
+                Console.WriteLine("Your score is invalid. Please enter again:");
+                Console.WriteLine("Please enter your score for Turn 3");
+                score3 = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+        else if (score1+score2<10)
+        {
+            while ( score3 >= 10 - score2-score1)
+            {
+                Console.WriteLine("Your score is invalid. Please enter again:");
+                Console.WriteLine("Please enter your score for Turn 3");
+                score3 = Convert.ToInt32(Console.ReadLine());
+            }
+        }
         int nextTwoframes = score1 + score2;
         int nextframe = score1;
         string totalScore = (score1 + score2 + score3).ToString();
         if (score1 == 10)
         {
-            totalScore = (10 + score2 +score3).ToString();
+            totalScore = (Convert.ToInt32(totalScore) + score2 +score3).ToString();
         }
         if (score2 == 10)
         {
-            totalScore = (10 + score3).ToString();
+            totalScore = (Convert.ToInt32(totalScore) + score3).ToString();
         }
         if (score3 == 10)
         {
-            totalScore = "10";
+            totalScore = (Convert.ToInt32(totalScore) + 10).ToString();
         }
         if (score1 < 10 && score1 + score2 == 10)
         {
-            totalScore = (10 + score3).ToString();
+            totalScore = (Convert.ToInt32(totalScore) + score3).ToString();
         }
         if(score1 == 10 && score2 + score3 == 10)
         {
-        totalScore ="10" ;
+            totalScore = (Convert.ToInt32(totalScore)+10).ToString();
         }
         Tuple<string, int, int> scoreList = new Tuple<string, int, int>(totalScore, nextframe, nextTwoframes);
         player.scores.Add(scoreList);
@@ -97,11 +130,23 @@ void BonusRoll(Player player)
 static void Roll(Player player)
 {
         Console.WriteLine($"{player.name}:");
-        Console.WriteLine("Please enter your score for Turn 1");
+        Console.WriteLine("Please enter your score for Turn 1");   
         int score1 = Convert.ToInt32(Console.ReadLine());
+        while (score1 >10)
+        {
+            Console.WriteLine("Your score is invalid. Please enter again:");
+            Console.WriteLine("Please enter your score for Turn 1");
+            score1 = Convert.ToInt32(Console.ReadLine());
+        }
         int score2 = 0;
         if (score1 < 10)
         {
+            Console.WriteLine("Please enter your score for Turn 2");
+            score2 = Convert.ToInt32(Console.ReadLine());
+        }
+        while (score2 > 10 || score2>(10-score1))
+        {
+            Console.WriteLine("Your score is invalid. Please enter again:");
             Console.WriteLine("Please enter your score for Turn 2");
             score2 = Convert.ToInt32(Console.ReadLine());
         }
@@ -134,7 +179,7 @@ static void populateResult(Player player, List<int> calculatedScoreList)
 {
     int i = 0;
     Console.WriteLine($"{player} result:");
-    foreach (var score in calculatedScoreList)
+    foreach (var score in Enumerable.Reverse(calculatedScoreList))
     {
         i++;
 
